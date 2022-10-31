@@ -114,3 +114,26 @@
 @mixin component-bottom {
   margin-bottom: 2.4rem;
 }
+
+// dimensions
+@mixin nav {
+  height: 6rem;
+}
+
+@mixin footer {
+  height: 5.6rem;
+}
+
+@mixin ingredient-card {
+  padding: 0 calc(7rem - $gutter-mobile);
+}
+
+// divider
+@mixin divider {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-top: 0.1rem solid $accent-bright;
+}
