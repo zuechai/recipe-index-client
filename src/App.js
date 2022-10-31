@@ -1,8 +1,8 @@
-// import {
-//   createBrowserHistory,
-//   createBrowserRouter,
-//   RouterProvider,
-// } from "react-router-dom";
+import {
+  createBrowserHistory,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 
 import "./App.css";
@@ -35,18 +35,21 @@ const recipes = [
 ];
 
 function App() {
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <RecipePage />,
-  //     children: [],
-  //   },
-  // ]);
+  const router = createBrowserRouter([
+    {
+      element: <NavBar />,
+      children: [
+        {
+          path: "/",
+          element: <div>Hi</div>,
+        },
+      ],
+    },
+  ]);
 
   return (
     <>
-      <NavBar />
-      <div>Recipe Index App</div>
+      <RouterProvider router={router} />
     </>
   );
 }
