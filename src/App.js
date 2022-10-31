@@ -4,6 +4,7 @@
 //   RouterProvider,
 // } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
+import Footer from "./components/Footer/Footer";
 
 import "./App.css";
 
@@ -47,6 +48,7 @@ function App() {
     <>
       <NavBar />
       <div>Recipe Index App</div>
+      <Footer />
     </>
   );
 }
