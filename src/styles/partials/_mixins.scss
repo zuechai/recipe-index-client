@@ -28,69 +28,89 @@
 //*** TYPOGRAPHY
 
 @mixin page-header {
-  font-size: 2.8rem;
+  font-size: 3.6rem;
   line-height: 3.6rem;
   font-weight: 600;
   @include tablet-media-break {
-    font-size: 3.2rem;
-    line-height: 4rem;
   }
+  @content;
+}
+
+@mixin logo-copy {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 600;
+  @include tablet-media-break {
+  }
+  @content;
 }
 
 @mixin subheader {
-  font-size: 2rem;
-  line-height: 2.8rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
   font-weight: 600;
   @include tablet-media-break {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
   }
+  @content;
 }
 
-// FOR LABELS, BUTTONS, & LINKS
-@mixin labels-links {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  font-weight: 600;
+@mixin nav-links {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   @include tablet-media-break {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
   }
+  @content;
 }
 
-@mixin table-header {
-  color: $slate;
-  font-size: 1.1rem;
+// breadcrumbs and footer links
+@mixin breadcrumbs {
+  font-size: 1rem;
+  line-height: 1.4rem;
+  @include tablet-media-break {
+  }
+  @content;
+}
+
+// @mixin p1 {
+//   font-size: 1.5rem;
+//   line-height: 2.6rem;
+//   @include tablet-media-break {
+//     font-size: 1.6rem;
+//     line-height: 2.8rem;
+//   }
+// }
+
+@mixin method {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  @include tablet-media-break {
+  }
+  @content;
+}
+
+@mixin ingredients {
+  font-size: 1.2rem;
   line-height: 1.6rem;
   @include tablet-media-break {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
   }
+  @content;
 }
 
-@mixin p1 {
-  font-size: 1.5rem;
-  line-height: 2.6rem;
-  @include tablet-media-break {
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-  }
+// spacing
+
+@mixin nav-pad {
+  padding: 1.8rem 1.6rem;
 }
 
-@mixin p2 {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  @include tablet-media-break {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
-  }
+@mixin main-header {
+  margin-top: 2.4rem;
+  margin-bottom: 1.8rem;
 }
 
-@mixin p3 {
-  font-size: 1.1rem;
-  line-height: 1.6rem;
-  @include tablet-media-break {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
+@mixin subheading {
+  margin-bottom: 1.2rem;
+}
+
+@mixin component-bottom {
+  margin-bottom: 2.4rem;
 }
