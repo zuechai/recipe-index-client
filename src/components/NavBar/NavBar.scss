@@ -1,0 +1,35 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nb {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    @include nav-pad;
+    background-color: $primary-dark;
+    color: $primary-light;
+    border-top: solid 0.2rem $accent-bright;
+    border-bottom: solid 0.2rem $accent-bright;
+  }
+
+  &-logo {
+    &__wrapper {
+    }
+    &__text {
+    }
+  }
+
+  &-searchbar {
+  }
+
+  &-nav {
+    display: flex;
+    gap: 1.8rem;
+
+    &__item {
+    }
+    &__link {
+    }
+  }
+}
