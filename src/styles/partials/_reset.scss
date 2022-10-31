@@ -16,8 +16,9 @@ html {
 
 body {
   font-family: $font-family, sans-serif;
-  @include body-copy;
-  color: $instock-black;
+  font-size: 1.6rem;
+  color: $primary-dark;
+  background-color: $primary-light;
 }
 
 a {
