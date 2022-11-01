@@ -13,7 +13,6 @@ const recipes = [
   {
     id: 1,
     name: "Fermented Napa Cabbage",
-    yield: "1 quart jar",
     image: null,
     ingredients: [
       {
@@ -24,15 +23,40 @@ const recipes = [
         preparation: "",
       },
       {
-        id: 1,
-        name: "napa cabbage",
-        quantity: 1,
-        unit: "head",
+        id: 2,
+        name: "water",
+        quantity: 4,
+        unit: "quarts",
         preparation: "",
       },
     ],
-    method: ["do this in step 1", "step 2", "step 3"],
-    notes: "anything else important about the important",
+    method: [
+      {
+        id: 1,
+        stepNum: 1,
+        method:
+          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
+      },
+      {
+        id: 2,
+        stepNum: 2,
+        method:
+          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
+      },
+      {
+        id: 3,
+        stepNum: 3,
+        method:
+          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
+      },
+      {
+        id: 4,
+        stepNum: 4,
+        method:
+          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
+      },
+    ],
+    collaborators: [],
   },
 ];
 
@@ -42,7 +66,7 @@ function App() {
       children: [
         {
           path: "/",
-          element: <RecipePage />,
+          element: <RecipePage recipe={recipes[0]} />,
         },
       ],
     },
