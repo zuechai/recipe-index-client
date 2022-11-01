@@ -19,12 +19,12 @@ export default function RecipePage({ recipe }) {
   return (
     <>
       <BodyHeader recipe={selectedRecipe} />
+      {recipe.image !== null && <img src="" alt={recipe.imageAlt} />}
     </>
   );
 }
 
-// BodyHeader
-//  title & breadcrumbs
 // RecipeImage if not null
+//  todo research optimizations for loading images, etc
 // IngredientCard
 // Methods
