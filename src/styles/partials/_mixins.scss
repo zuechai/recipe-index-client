@@ -146,9 +146,17 @@
 }
 
 //--- borders
+@mixin border-radius {
+  border-radius: 0.4rem;
+}
 
 // nav
 @mixin nav-borders {
   border-top: solid 0.2rem $accent-bright;
   border-bottom: solid 0.2rem $accent-bright;
+}
+
+//--- box shadow
+@mixin box-shadow {
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
 }

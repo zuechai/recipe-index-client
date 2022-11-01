@@ -10,7 +10,8 @@
     padding: 0.8rem;
     background-color: $accent-light;
     border: solid 0.2rem $accent-bright;
-    border-radius: 0.4rem;
+    @include border-radius;
+    @include box-shadow;
 
     &__header {
     }

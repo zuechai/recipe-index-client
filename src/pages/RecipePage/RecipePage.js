@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import BodyHeader from "../../components/BodyHeader/BodyHeader";
 import IngredientCard from "../../components/IngredientCard/IngredientCard";
+
 import "./RecipePage.scss";
+
+//remove after testing
+import recipeImg from "../../assets/images/dashi-16-9.jpg";
 
 export default function RecipePage({ recipe }) {
   const [selectedRecipe, setSelectedRecipe] = useState();
+
+  // remove after testing
+  recipe.image = recipeImg;
 
   useEffect(() => {
     if (!selectedRecipe) {
@@ -18,11 +25,19 @@ export default function RecipePage({ recipe }) {
   }
 
   return (
-    <>
+    <main>
       <BodyHeader recipe={selectedRecipe} />
-      {recipe.image !== null && <img src="" alt={recipe.imageAlt} />}
+      <div className="rp-main__img-container">
+        {recipe.image !== null && (
+          <img
+            src={recipeImg}
+            alt={recipe.imageAlt}
+            className="rp-main__img-img"
+          />
+        )}
+      </div>
       <IngredientCard ingredients={recipe.ingredients} />
-    </>
+    </main>
   );
 }
 

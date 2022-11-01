@@ -1,2 +1,14 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.rp-main {
+  &__img-container {
+    @include component-margin;
+    @include pad-sides;
+  }
+
+  &__img-img {
+    @include border-radius;
+    @include box-shadow;
+  }
+}
