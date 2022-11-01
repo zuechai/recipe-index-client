@@ -8,14 +8,14 @@ export default function IngredientCard({ ingredients }) {
           <h3 className="ic-card__header-text">Ingredients</h3>
         </div>
         <ul className="ic-ingredient-list">
-          {ingredients.map(({ quantity, unit, ingredient }) => {
+          {ingredients.map(({ id, quantity, unit, ingredient }) => {
             return (
-              <li className="ic-ingredient-list__item">
-                <span className="ic-ingredient-list__detail ic-ingredient-list__detail--quantity">
+              <li key={id} className="ic-ingredient-list__item">
+                <div className="ic-ingredient-list__detail ic-ingredient-list__detail--quantity">
                   {quantity}
-                </span>
-                <span className="ic-ingredient-list__detail">{unit}</span>
-                <span className="ic-ingredient-list__detail">{ingredient}</span>
+                </div>
+                <div className="ic-ingredient-list__detail">{unit}</div>
+                <div className="ic-ingredient-list__detail">{ingredient}</div>
               </li>
             );
           })}

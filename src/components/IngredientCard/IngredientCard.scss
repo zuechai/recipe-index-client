@@ -23,10 +23,15 @@
 
   &-ingredient-list {
     display: flex;
+    gap: 0.8rem;
     flex-direction: column;
+
     &__item {
-      display: grid;
-      grid-template-columns: 0.1fr 0.2fr 1fr;
+      // display: grid;
+      // grid-template-columns: 0.1fr 0.4fr 1fr;
+      // gap: 0.8rem;
+      // padding-left: 2.4rem;
+      display: flex;
       gap: 0.8rem;
     }
 
