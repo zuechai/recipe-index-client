@@ -3,6 +3,7 @@
 
 .ic {
   &-section {
+    @include component-margin;
   }
 
   &-card {
@@ -31,7 +32,7 @@
       // display: grid;
       // grid-template-columns: 0.1fr 0.4fr 1fr;
       // gap: 0.8rem;
-      // padding-left: 2.4rem;
+      padding-left: 2.4rem;
       display: flex;
       gap: 0.8rem;
     }
