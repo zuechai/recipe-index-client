@@ -46,9 +46,11 @@
 }
 
 @mixin subheader {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
-  // font-weight: 600;
+  text-transform: uppercase;
+  color: $grey;
+  font-weight: 600;
   @include tablet-media-break {
   }
   @content;
@@ -89,7 +91,7 @@
 }
 
 @mixin ingredients {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.6rem;
   @include tablet-media-break {
   }
@@ -115,6 +117,11 @@
   margin-bottom: 2.4rem;
 }
 
+@mixin pad-sides {
+  padding-right: 1.6rem;
+  padding-left: 1.6rem;
+}
+
 // dimensions
 @mixin nav {
   height: 6rem;
@@ -125,7 +132,7 @@
 }
 
 @mixin ingredient-card {
-  padding: 0 calc(7rem - $gutter-mobile);
+  margin: 0 calc(7rem - $gutter-mobile);
 }
 
 // divider

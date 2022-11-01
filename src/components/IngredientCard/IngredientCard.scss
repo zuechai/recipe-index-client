@@ -1,0 +1,41 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.ic {
+  &-section {
+  }
+
+  &-card {
+    @include ingredient-card;
+    padding: 0.8rem;
+    background-color: $accent-light;
+    border: solid 0.2rem $accent-bright;
+    border-radius: 0.4rem;
+
+    &__header {
+    }
+
+    &__header-text {
+      @include subheader;
+      @include subheading;
+    }
+  }
+
+  &-ingredient-list {
+    display: flex;
+    flex-direction: column;
+    &__item {
+      display: grid;
+      grid-template-columns: 0.1fr 0.2fr 1fr;
+      gap: 0.8rem;
+    }
+
+    &__detail {
+      @include ingredients;
+
+      &--quantity {
+        text-align: right;
+      }
+    }
+  }
+}

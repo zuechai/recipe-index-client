@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BodyHeader from "../../components/BodyHeader/BodyHeader";
+import IngredientCard from "../../components/IngredientCard/IngredientCard";
 import "./RecipePage.scss";
 
 export default function RecipePage({ recipe }) {
@@ -20,6 +21,7 @@ export default function RecipePage({ recipe }) {
     <>
       <BodyHeader recipe={selectedRecipe} />
       {recipe.image !== null && <img src="" alt={recipe.imageAlt} />}
+      <IngredientCard ingredients={recipe.ingredients} />
     </>
   );
 }

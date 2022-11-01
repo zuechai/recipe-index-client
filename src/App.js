@@ -1,8 +1,4 @@
-import {
-  createBrowserHistory,
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
@@ -17,16 +13,30 @@ const recipes = [
     ingredients: [
       {
         id: 1,
-        name: "napa cabbage",
+        ingredient: "napa cabbage",
         quantity: 1,
         unit: "head",
         preparation: "",
       },
       {
         id: 2,
-        name: "water",
+        ingredient: "water",
         quantity: 4,
         unit: "quarts",
+        preparation: "",
+      },
+      {
+        id: 3,
+        ingredient: "garlic",
+        quantity: 1,
+        unit: "clove",
+        preparation: "",
+      },
+      {
+        id: 4,
+        ingredient: "distilled white vinegar",
+        quantity: 0.5,
+        unit: "cup",
         preparation: "",
       },
     ],
