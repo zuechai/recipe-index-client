@@ -8,6 +8,7 @@
     background-color: $primary-dark;
     color: $primary-light;
     @include nav-pad;
+    @include nav-borders;
   }
 
   &-column {

@@ -9,8 +9,7 @@
     @include nav-pad;
     background-color: $primary-dark;
     color: $primary-light;
-    border-top: solid 0.2rem $accent-bright;
-    border-bottom: solid 0.2rem $accent-bright;
+    @include nav-borders;
   }
 
   &-logo {

@@ -1,5 +1,5 @@
 import {
-  // createBrowserHistory,
+  createBrowserHistory,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
@@ -38,20 +38,20 @@ const recipes = [
 function App() {
   const router = createBrowserRouter([
     {
-      element: <NavBar />,
       children: [
         {
-          path: "/",
+          path: "",
           element: <div>Hi</div>,
         },
       ],
-      element: <Footer />,
     },
   ]);
 
   return (
     <>
+      <NavBar />
       <RouterProvider router={router} />
+      <Footer />
     </>
   );
 }
