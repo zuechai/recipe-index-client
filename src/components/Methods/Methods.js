@@ -12,10 +12,10 @@ export default function Methods({ methods }) {
           methods.map(({ id, stepNum, method }) => {
             return (
               <li key={id} className="m-list-item">
-                <p className="m-list-item__step">
+                <div className="m-list-item__step">
                   {stepNum < 10 ? `0${stepNum}` : stepNum}
-                </p>
-                <p className="m-list-item__method">{method}</p>
+                </div>
+                <div className="m-list-item__method">{method}</div>
               </li>
             );
           })}

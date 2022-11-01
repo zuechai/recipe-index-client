@@ -30,12 +30,15 @@
     gap: 0.8rem;
 
     &__step {
+      flex: 5%;
+      width: 2rem;
       text-align: right;
       color: $text-accent;
       align-self: flex-start;
       font-size: 2.4rem;
     }
     &__method {
+      flex: 85%;
       padding-top: 0.5rem;
       align-self: flex-end;
       @include method;
