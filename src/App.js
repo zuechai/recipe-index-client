@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
 import "./App.css";
+import RecipePage from "./pages/RecipePage/RecipePage";
 
 const recipes = [
   {
@@ -40,8 +41,8 @@ function App() {
     {
       children: [
         {
-          path: "",
-          element: <div>Hi</div>,
+          path: "/",
+          element: <RecipePage />,
         },
       ],
     },
