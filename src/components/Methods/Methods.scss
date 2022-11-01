@@ -1,0 +1,44 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.m-section {
+  @include pad-sides;
+  @include component-margin;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    @include subheader-margin;
+
+    &-text {
+      @include subheader;
+    }
+    &-divider {
+      @include divider;
+    }
+  }
+}
+
+.m-list {
+  display: flex;
+  flex-direction: column;
+  gap: $gutter-mobile;
+
+  &-item {
+    display: flex;
+    gap: 0.8rem;
+
+    &__step {
+      text-align: right;
+      color: $text-accent;
+      align-self: flex-start;
+      font-size: 2.4rem;
+    }
+    &__method {
+      padding-top: 0.5rem;
+      align-self: flex-end;
+      @include method;
+    }
+  }
+}

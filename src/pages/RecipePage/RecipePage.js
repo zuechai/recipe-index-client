@@ -6,6 +6,7 @@ import "./RecipePage.scss";
 
 //remove after testing
 import recipeImg from "../../assets/images/dashi-16-9.jpg";
+import Methods from "../../components/Methods/Methods";
 
 export default function RecipePage({ recipe }) {
   const [selectedRecipe, setSelectedRecipe] = useState();
@@ -37,6 +38,7 @@ export default function RecipePage({ recipe }) {
         )}
       </div>
       <IngredientCard ingredients={recipe.ingredients} />
+      <Methods methods={recipe.methods} />
     </main>
   );
 }

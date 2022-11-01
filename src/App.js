@@ -40,7 +40,7 @@ const recipes = [
         preparation: "",
       },
     ],
-    method: [
+    methods: [
       {
         id: 1,
         stepNum: 1,
