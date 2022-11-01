@@ -11,10 +11,14 @@ export default function NavBar() {
       <div className="nb-searchbar">{/* Hidden Search Bar */}</div>
       <ul className="nb-nav">
         <li className="nb-nav__item">
-          <a className="nb-nav__link">Index</a>
+          <a href="/" className="nb-nav__link">
+            Index
+          </a>
         </li>
         <li className="nb-nav__item">
-          <a className="nb-nav__link">Account</a>
+          <a href="/" className="nb-nav__link">
+            Account
+          </a>
         </li>
       </ul>
     </header>
