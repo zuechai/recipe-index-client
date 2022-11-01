@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BodyHeader from "../../components/BodyHeader/BodyHeader";
 import "./RecipePage.scss";
 
 export default function RecipePage({ recipe }) {
@@ -15,7 +16,11 @@ export default function RecipePage({ recipe }) {
     return <h2>Loading...</h2>;
   }
 
-  return <h2>{recipe.name}</h2>;
+  return (
+    <>
+      <BodyHeader recipe={selectedRecipe} />
+    </>
+  );
 }
 
 // BodyHeader

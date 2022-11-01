@@ -1,0 +1,39 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.bh {
+  &-header {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 $pad-2;
+    &__title {
+    }
+
+    &__name {
+      @include page-header;
+      @include main-header;
+      // margin-top: 0.8rem;
+    }
+  }
+
+  &-crumb {
+    &__wrapper {
+      margin-top: 1.2rem;
+    }
+
+    &__list {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: flex-end;
+      color: $grey;
+      @include breadcrumbs;
+    }
+
+    &__item {
+    }
+
+    &__link {
+      color: inherit;
+    }
+  }
+}
