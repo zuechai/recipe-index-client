@@ -19,7 +19,7 @@
 
     &__header-text {
       @include subheader;
-      @include subheading;
+      @include subheading-bottom;
     }
   }
 

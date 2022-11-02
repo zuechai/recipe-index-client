@@ -16,15 +16,6 @@
   }
 }
 
-@mixin subheader-margin {
-  padding-top: $pad-3;
-  padding-bottom: 1.2rem;
-}
-
-@mixin component-margin {
-  margin-bottom: 2.4rem;
-}
-
 //*** TYPOGRAPHY
 
 @mixin page-header {
@@ -73,15 +64,6 @@
   @content;
 }
 
-// @mixin p1 {
-//   font-size: 1.5rem;
-//   line-height: 2.6rem;
-//   @include tablet-media-break {
-//     font-size: 1.6rem;
-//     line-height: 2.8rem;
-//   }
-// }
-
 @mixin method {
   font-size: 1.3rem;
   line-height: 1.8rem;
@@ -105,12 +87,21 @@
 }
 
 @mixin main-header {
-  margin-top: 2.4rem;
-  margin-bottom: 1.8rem;
+  margin-top: 3.2rem;
+  margin-bottom: 3.6rem;
 }
 
-@mixin subheading {
+@mixin subheading-bottom {
   margin-bottom: 1.2rem;
+}
+
+@mixin subheader-margin {
+  padding-top: $pad-3;
+  padding-bottom: 1.2rem;
+}
+
+@mixin component-margin {
+  margin-bottom: 2.4rem;
 }
 
 @mixin component-bottom {

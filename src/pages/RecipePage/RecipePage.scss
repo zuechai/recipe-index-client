@@ -3,7 +3,7 @@
 
 .rp-main {
   &__img-container {
-    @include component-margin;
+    margin-bottom: 3.6rem;
     @include pad-sides;
   }
 
