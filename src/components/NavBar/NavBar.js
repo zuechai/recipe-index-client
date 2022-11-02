@@ -6,7 +6,7 @@ export default function NavBar() {
   return (
     <header className="nb-header">
       <div className="nb-logo__wrapper">
-        <h1 className="nb-logo__text">Logo</h1>
+        <h1 className="nb-logo__text">Rcp Indx</h1>
       </div>
       <div className="nb-searchbar">{/* Hidden Search Bar */}</div>
       <ul className="nb-nav">
