@@ -1,13 +1,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.rp-main {
-  &__img-container {
+.rpMain {
+  &__imgContainer {
     margin-bottom: 3.6rem;
     @include pad-sides;
   }
 
-  &__img-img {
+  &__imgImg {
     @include border-radius;
     @include box-shadow;
   }
