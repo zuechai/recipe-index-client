@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import NavBar from "./components/NavBar/NavBar";
+import RecipeIndexPage from "./pages/RecipeIndexPage/RecipeIndexPage";
 import RecipePage from "./pages/RecipePage/RecipePage";
 import Footer from "./components/Footer/Footer";
 
@@ -34,6 +35,14 @@ function App() {
       children: [
         {
           path: "/",
+          element: <RecipeIndexPage recipes={recipes} />,
+        },
+        {
+          path: "/recipes",
+          element: <RecipeIndexPage recipes={recipes} />,
+        },
+        {
+          path: "/recipes/:id",
           element: <RecipePage recipeId={recipes[0].recipeId} />,
         },
       ],

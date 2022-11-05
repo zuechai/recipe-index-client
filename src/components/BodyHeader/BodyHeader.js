@@ -1,10 +1,10 @@
 import "./BodyHeader.scss";
 
-export default function BodyHeader({ recipe }) {
+export default function BodyHeader({ header }) {
   return (
     <header className="bh-header">
       <div className="bh-header__title">
-        <h2 className="bh-header__name">{recipe.title}</h2>
+        <h2 className="bh-header__name">{header}</h2>
       </div>
       {/* <div className="bh-crumb__wrapper">
         <ol className="bh-crumb__list">

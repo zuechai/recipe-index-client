@@ -35,7 +35,7 @@ export default function RecipePage({ recipeId }) {
   // if (selectedRecipe) {
   return (
     <main>
-      <BodyHeader recipe={selectedRecipe} />
+      <BodyHeader header={selectedRecipe.title} />
       <div className={styles.rpMain__imgContainer}>
         {selectedRecipe.image !== null && (
           <img
