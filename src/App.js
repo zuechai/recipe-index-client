@@ -6,7 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import RecipePage from "./pages/RecipePage/RecipePage";
 import Footer from "./components/Footer/Footer";
 
-import "./App.module.css";
+import "./App.css";
 
 function App() {
   const [recipes, setRecipes] = useState();
@@ -23,23 +23,22 @@ function App() {
     if (!recipes) {
       getRecipes();
     }
-  }, []);
+  }, [recipes]);
+
+  if (!recipes) {
+    return <h2>REPLACE ME WITH A LOADING COMPONENT</h2>;
+  }
 
   const router = createBrowserRouter([
     {
       children: [
         {
           path: "/",
-          element: <RecipePage recipe={recipes[0]} />,
-          element: <RecipePage />,
+          element: <RecipePage recipeId={recipes[0].recipeId} />,
         },
       ],
     },
   ]);
-
-  if (!recipes) {
-    return <h2>REPLACE ME WITH A LOADING COMPONENT</h2>;
-  }
 
   return (
     <>
