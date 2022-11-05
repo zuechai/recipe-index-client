@@ -1,2 +1,23 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.card {
+  @include borders;
+  @include border-radius;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 9/7;
+  width: 100%;
+  min-height: 10rem;
+  padding: 0.8rem;
+  cursor: pointer;
+
+  &__header {
+  }
+
+  &__headerText {
+    color: $primary-light;
+    word-wrap: break-word;
+  }
+}

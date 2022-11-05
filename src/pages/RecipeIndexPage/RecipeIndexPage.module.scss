@@ -1,2 +1,16 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.index {
+  &__body {
+    @include pad-sides;
+    @include component-margin;
+  }
+
+  &__cardList {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 0.8rem));
+    gap: 1.6rem;
+    width: 100%;
+  }
+}

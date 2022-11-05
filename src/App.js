@@ -43,7 +43,7 @@ function App() {
         },
         {
           path: "/recipes/:id",
-          element: <RecipePage recipeId={recipes[0].recipeId} />,
+          element: <RecipePage />,
         },
       ],
     },

@@ -141,6 +141,10 @@
   border-radius: 0.4rem;
 }
 
+@mixin borders {
+  border: solid 0.2rem $accent-bright;
+}
+
 // nav
 @mixin nav-borders {
   border-top: solid 0.2rem $accent-bright;

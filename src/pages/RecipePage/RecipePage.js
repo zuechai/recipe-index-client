@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
+
 import BodyHeader from "../../components/BodyHeader/BodyHeader";
 import IngredientCard from "../../components/IngredientCard/IngredientCard";
 import Methods from "../../components/Methods/Methods";
@@ -9,30 +11,25 @@ import styles from "./RecipePage.module.scss";
 //remove after testing
 // import recipeImg from "../../assets/images/dashi-16-9.jpg";
 
-export default function RecipePage({ recipeId }) {
+export default function RecipePage() {
   const [selectedRecipe, setSelectedRecipe] = useState();
 
-  // remove after testing
-  // recipe.image = recipeImg;
-  console.log(recipeId);
+  const { id } = useParams();
 
   useEffect(() => {
     const getRecipeById = async () => {
-      const result = await axios.get(
-        `http://localhost:5050/recipes/${recipeId}`
-      );
+      const result = await axios.get(`http://localhost:5050/recipes/${id}`);
       setSelectedRecipe(result.data);
     };
     if (!selectedRecipe) {
       getRecipeById();
     }
-  }, [recipeId, selectedRecipe]);
+  }, [id, selectedRecipe]);
 
   while (!selectedRecipe) {
     return <h2>Loading...</h2>;
   }
 
-  // if (selectedRecipe) {
   return (
     <main>
       <BodyHeader header={selectedRecipe.title} />
@@ -50,9 +47,3 @@ export default function RecipePage({ recipeId }) {
     </main>
   );
 }
-// }
-
-// RecipeImage if not null
-//  todo research optimizations for loading images, etc
-// IngredientCard
-// Methods

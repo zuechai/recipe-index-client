@@ -1,2 +1,15 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.search {
+  width: 100%;
+  @include component-margin;
+
+  &__form {
+    width: 100%;
+  }
+
+  &__field {
+    width: 100%;
+  }
+}
