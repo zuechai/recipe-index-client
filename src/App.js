@@ -1,122 +1,45 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import NavBar from "./components/NavBar/NavBar";
+import RecipePage from "./pages/RecipePage/RecipePage";
 import Footer from "./components/Footer/Footer";
 
-import "./App.css";
-import RecipePage from "./pages/RecipePage/RecipePage";
-
-const recipes = [
-  {
-    id: 1,
-    name: "Fermented Napa Cabbage",
-    image: null,
-    ingredients: [
-      {
-        id: 1,
-        ingredient: "napa cabbage",
-        quantity: 1,
-        unit: "head",
-        preparation: "",
-      },
-      {
-        id: 2,
-        ingredient: "water",
-        quantity: 4,
-        unit: "quarts",
-        preparation: "",
-      },
-      {
-        id: 3,
-        ingredient: "garlic",
-        quantity: 1,
-        unit: "clove",
-        preparation: "",
-      },
-      {
-        id: 4,
-        ingredient: "distilled white vinegar",
-        quantity: 0.5,
-        unit: "cup",
-        preparation: "",
-      },
-    ],
-    methods: [
-      {
-        id: 1,
-        stepNum: 1,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 2,
-        stepNum: 2,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 3,
-        stepNum: 3,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 4,
-        stepNum: 4,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 5,
-        stepNum: 5,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 6,
-        stepNum: 6,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 7,
-        stepNum: 7,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 8,
-        stepNum: 8,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 9,
-        stepNum: 9,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-      {
-        id: 10,
-        stepNum: 10,
-        method:
-          "Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.",
-      },
-    ],
-    collaborators: [],
-  },
-];
+import "./App.module.css";
 
 function App() {
+  const [recipes, setRecipes] = useState();
+
+  useEffect(() => {
+    const getRecipes = async () => {
+      try {
+        const result = await axios.get("http://localhost:5050/recipes");
+        setRecipes(result.data);
+      } catch (e) {
+        console.log("ERROR ====> ", e);
+      }
+    };
+    if (!recipes) {
+      getRecipes();
+    }
+  }, []);
+
   const router = createBrowserRouter([
     {
       children: [
         {
           path: "/",
           element: <RecipePage recipe={recipes[0]} />,
+          element: <RecipePage />,
         },
       ],
     },
   ]);
+
+  if (!recipes) {
+    return <h2>REPLACE ME WITH A LOADING COMPONENT</h2>;
+  }
 
   return (
     <>
