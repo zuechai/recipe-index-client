@@ -9,7 +9,25 @@
     width: 100%;
   }
 
-  &__field {
+  &__label {
+    content: "Search Bar";
+    visibility: hidden;
+  }
+
+  &__field,
+  input {
     width: 100%;
+    @include borders;
+    border-width: 0.4rem;
+    @include border-radius;
+    text-align: center;
+    font: inherit;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    color: $primary-dark;
+
+    &::placeholder {
+      color: $grey;
+    }
   }
 }

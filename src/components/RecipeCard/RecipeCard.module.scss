@@ -4,6 +4,8 @@
 .card {
   @include borders;
   @include border-radius;
+  border-width: 0.1rem;
+  @include box-shadow;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
