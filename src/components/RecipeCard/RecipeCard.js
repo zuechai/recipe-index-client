@@ -10,7 +10,7 @@ export default function RecipeCard({ id, title, image }) {
       style={{ backgroundImage: `${imgOverlay}, url(${testImg})` }}
     >
       <header className={styles.card__header}>
-        <h3 className={styles.card__headerText}>{"Fermented Napa Cabbage"}</h3>
+        <h3 className={styles.card__headerText}>{title}</h3>
       </header>
     </article>
   );
