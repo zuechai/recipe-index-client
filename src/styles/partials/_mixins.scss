@@ -46,6 +46,8 @@
   text-transform: uppercase;
   color: $grey;
   font-weight: 600;
+  padding-bottom: 0.6rem;
+
   @include tablet-media-break {
   }
   @content;
@@ -91,16 +93,16 @@
 }
 
 @mixin subheading-bottom {
-  margin-bottom: 0.6rem;
+  // margin-bottom: 0.6rem;
 }
 
 @mixin subheader-margin {
   padding-top: $pad-3;
-  padding-bottom: 1.2rem;
+  // padding-bottom: 1.2rem;
 }
 
 @mixin component-margin {
-  margin-bottom: 1.8rem;
+  margin-bottom: 3rem;
 }
 
 @mixin component-bottom {

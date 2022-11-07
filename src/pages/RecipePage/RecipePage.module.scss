@@ -5,7 +5,7 @@
   min-height: calc(100vh - (9rem + 6.3rem));
 
   &__imgContainer {
-    margin-bottom: 3.6rem;
+    @include component-margin;
     @include pad-sides;
   }
 

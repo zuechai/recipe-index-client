@@ -33,15 +33,15 @@ export default function RecipePage() {
   return (
     <main className={styles.rpMain}>
       <BodyHeader header={selectedRecipe.title} />
-      <div className={styles.rpMain__imgContainer}>
-        {selectedRecipe.image !== null && (
+      {selectedRecipe.image !== null && (
+        <div className={styles.rpMain__imgContainer}>
           <img
             src={selectedRecipe.image}
             alt={"No alternative text provided by user"}
             className={styles.rpMain__imgImg}
           />
-        )}
-      </div>
+        </div>
+      )}
       <IngredientCard ingredients={selectedRecipe.ingredients} />
       <Methods methods={selectedRecipe.methods} />
     </main>
