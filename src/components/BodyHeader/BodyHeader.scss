@@ -5,14 +5,13 @@
   &-header {
     display: flex;
     flex-direction: column-reverse;
-    padding: 0 $pad-2;
-    &__title {
-    }
+    @include pad-sides;
+
+    // &__title {
+    // }
 
     &__name {
       @include page-header;
-      @include main-header;
-      // margin-top: 0.8rem;
     }
   }
 
@@ -29,8 +28,8 @@
       @include breadcrumbs;
     }
 
-    &__item {
-    }
+    // &__item {
+    // }
 
     &__link {
       color: inherit;

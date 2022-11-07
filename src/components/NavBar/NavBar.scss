@@ -10,6 +10,7 @@
     background-color: $primary-dark;
     color: $primary-light;
     @include nav-borders;
+    @include box-shadow;
   }
 
   &-logo {
@@ -20,8 +21,8 @@
     }
   }
 
-  &-searchbar {
-  }
+  // &-searchbar {
+  // }
 
   &-nav {
     display: flex;

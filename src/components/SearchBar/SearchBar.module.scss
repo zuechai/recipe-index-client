@@ -25,6 +25,7 @@
     font-size: 1.2rem;
     padding: 0.4rem;
     color: $primary-dark;
+    @include box-shadow;
 
     &::placeholder {
       color: $grey;

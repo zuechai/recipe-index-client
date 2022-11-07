@@ -21,6 +21,8 @@
 @mixin page-header {
   font-size: 3rem;
   line-height: 3rem;
+  margin-top: $pad-3;
+  margin-bottom: $pad-2;
   @include tablet-media-break {
   }
   @content;
@@ -82,11 +84,6 @@
 
 @mixin nav-pad {
   padding: 1.8rem 1.6rem 1.4rem;
-}
-
-@mixin main-header {
-  margin-top: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 @mixin subheading-bottom {
@@ -151,5 +148,5 @@
 
 //--- box shadow
 @mixin box-shadow {
-  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.4rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
 }
