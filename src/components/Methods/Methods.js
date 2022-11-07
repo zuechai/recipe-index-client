@@ -1,6 +1,7 @@
 import "./Methods.scss";
 
 export default function Methods({ methods }) {
+  console.log(methods);
   return (
     <section className="m-section">
       <header className="m-section__header">

@@ -9,9 +9,9 @@ export default function IngredientCard({ ingredients }) {
           <h3 className="ic-card__header-text">Ingredients</h3>
         </div>
         <ul className="ic-ingredient-list">
-          {ingredients.map(({ id, measurement, ingredient }) => {
+          {ingredients.map(({ ingredientId, measurement, ingredient }) => {
             return (
-              <li key={id} className="ic-ingredient-list__item">
+              <li key={ingredientId} className="ic-ingredient-list__item">
                 <div className="ic-ingredient-list__detail ic-ingredient-list__detail--quantity">
                   {measurement}
                 </div>

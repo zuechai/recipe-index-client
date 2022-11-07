@@ -18,12 +18,12 @@ export default function RecipeIndexPage({ recipes }) {
       <div className={styles.index__body}>
         <SearchBar />
         <ul className={styles.index__cardList}>
-          {recipes.map(({ id, title, image }) => {
-            console.log(id);
+          {recipes.map(({ recipeId, title, image }) => {
+            console.log(recipeId);
             return (
-              <li key={id} className="index__card-items">
-                <Link to={`/recipes/${id}`}>
-                  <RecipeCard id={id} title={title} image={image} />
+              <li key={recipeId} className="index__card-items">
+                <Link to={`/recipes/${recipeId}`}>
+                  <RecipeCard id={recipeId} title={title} image={image} />
                 </Link>
               </li>
             );

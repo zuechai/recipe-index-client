@@ -11,6 +11,7 @@ import "./App.css";
 
 function App() {
   const [recipes, setRecipes] = useState();
+  console.log(recipes);
 
   useEffect(() => {
     const getRecipes = async () => {
@@ -25,10 +26,6 @@ function App() {
       getRecipes();
     }
   }, [recipes]);
-
-  if (!recipes) {
-    return <h2>REPLACE ME WITH A LOADING COMPONENT</h2>;
-  }
 
   const router = createBrowserRouter([
     {
@@ -52,7 +49,11 @@ function App() {
   return (
     <>
       <NavBar />
-      <RouterProvider router={router} />
+      {!recipes ? (
+        <h2>REPLACE ME WITH A LOADING COMPONENT</h2>
+      ) : (
+        <RouterProvider router={router} />
+      )}
       <Footer />
     </>
   );

@@ -4,7 +4,7 @@ export default function SearchBar() {
   return (
     <div className={styles.search}>
       <form className={styles.search__form}>
-        <label className={styles.search__input} ariaLabel="Search Bar" />
+        <label className={styles.search__input} aria-label="Search Bar" />
         <input
           type="text"
           className={styles.search__field}
