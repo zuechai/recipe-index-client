@@ -2,12 +2,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import NavBar from "./components/NavBar/NavBar";
 import RecipeIndexPage from "./pages/RecipeIndexPage/RecipeIndexPage";
 import RecipePage from "./pages/RecipePage/RecipePage";
-import Footer from "./components/Footer/Footer";
 
 import "./App.css";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   const [recipes, setRecipes] = useState();
@@ -29,13 +28,10 @@ function App() {
 
   const router = createBrowserRouter([
     {
+      element: <HomePage recipes={recipes} />,
       children: [
         {
           path: "/",
-          element: <RecipeIndexPage recipes={recipes} />,
-        },
-        {
-          path: "/recipes",
           element: <RecipeIndexPage recipes={recipes} />,
         },
         {
@@ -48,13 +44,11 @@ function App() {
 
   return (
     <>
-      <NavBar />
       {!recipes ? (
         <h2>REPLACE ME WITH A LOADING COMPONENT</h2>
       ) : (
         <RouterProvider router={router} />
       )}
-      <Footer />
     </>
   );
 }

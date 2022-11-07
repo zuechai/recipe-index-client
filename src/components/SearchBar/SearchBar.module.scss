@@ -27,7 +27,7 @@
     color: $primary-dark;
     @include box-shadow;
 
-    &::placeholder {
+    &:placeholder {
       color: $grey;
     }
   }

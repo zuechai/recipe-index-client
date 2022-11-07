@@ -2,6 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .rpMain {
+  min-height: calc(100vh - (9rem + 6.3rem));
+
   &__imgContainer {
     margin-bottom: 3.6rem;
     @include pad-sides;

@@ -16,6 +16,10 @@
   }
 }
 
+@mixin page-min-height {
+  min-height: calc(100vh - (9rem + 6.3rem));
+}
+
 //*** TYPOGRAPHY
 
 @mixin page-header {
@@ -149,4 +153,24 @@
 //--- box shadow
 @mixin box-shadow {
   box-shadow: 0 0.4rem 0.5rem 0rem rgba(0, 0, 0, 0.25);
+}
+@mixin box-shadow-hover {
+  box-shadow: 0 0.4rem 1rem 0rem rgba(0, 0, 0, 0.3);
+}
+@mixin box-shadow-active {
+  box-shadow: none;
+}
+
+@mixin box-shadow-transition {
+  transition: all 0.3s;
+
+  &:hover {
+    @include box-shadow-hover;
+    transform: translateY(-0.1rem);
+  }
+
+  &:active {
+    @include box-shadow-active;
+    transform: none;
+  }
 }

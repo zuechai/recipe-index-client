@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./NavBar.scss";
 
@@ -11,14 +11,14 @@ export default function NavBar() {
       <div className="nb-searchbar">{/* Hidden Search Bar */}</div>
       <ul className="nb-nav">
         <li className="nb-nav__item">
-          <a href="/" className="nb-nav__link">
+          <Link to="/" className="nb-nav__link">
             Index
-          </a>
+          </Link>
         </li>
         <li className="nb-nav__item">
-          <a href="/" className="nb-nav__link">
+          <Link to="/" className="nb-nav__link">
             Account
-          </a>
+          </Link>
         </li>
       </ul>
     </header>

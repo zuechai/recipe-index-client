@@ -2,6 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .index {
+  @include page-min-height;
+
   &__body {
     @include pad-sides;
     @include component-margin;

@@ -6,6 +6,7 @@
   @include border-radius;
   border-width: 0.1rem;
   @include box-shadow;
+  @include box-shadow-transition;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

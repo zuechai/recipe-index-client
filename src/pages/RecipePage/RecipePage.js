@@ -31,7 +31,7 @@ export default function RecipePage() {
   }
 
   return (
-    <main>
+    <main className={styles.rpMain}>
       <BodyHeader header={selectedRecipe.title} />
       <div className={styles.rpMain__imgContainer}>
         {selectedRecipe.image !== null && (
