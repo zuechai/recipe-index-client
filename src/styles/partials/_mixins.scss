@@ -152,6 +152,10 @@
   border: solid 0.2rem $accent-bright;
 }
 
+@mixin borders--bottom {
+  border-bottom: solid 0.2rem $accent-bright;
+}
+
 // nav
 @mixin nav-borders {
   border-top: solid 0.2rem $accent-bright;
