@@ -5,8 +5,10 @@
   min-height: calc(100vh - (9rem + 6.3rem));
 
   &__imgContainer {
-    @include component-margin;
     @include pad-sides;
+    max-width: 76.8rem;
+    margin: 0 auto;
+    @include component-margin;
   }
 
   &__imgImg {
@@ -16,8 +18,14 @@
 }
 
 .flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   @include tablet-media-break {
     @include pad-sides;
-    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
   }
 }

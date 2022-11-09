@@ -3,11 +3,9 @@
 
 .section {
   @include component-margin;
-  padding-left: 1.6rem;
 }
 
 .card {
-  @include ingredient-card;
   padding: 0.8rem;
   background-color: $accent-light;
   border: solid 0.2rem $accent-bright;
@@ -29,6 +27,7 @@
 
 .ingredientList {
   @include ingredients;
+  max-width: 100%;
 
   &__item {
     padding-left: 1.6rem;
