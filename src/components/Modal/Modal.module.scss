@@ -14,6 +14,7 @@
 
   &__content {
     @include pad-sides;
+    @include border-radius;
     width: 90%;
     background-color: $primary-light;
   }
@@ -64,11 +65,40 @@
     color: $primary-light;
     padding: 0.8rem 1.6rem;
     @include border-radius;
+
+    &Submit {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__divider {
     @include divider;
     border-width: 0.2rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__userItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    @include borders--bottom;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__userOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+  }
+
+  &__icon {
+    cursor: pointer;
+    width: 2.4rem;
   }
 }
