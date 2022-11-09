@@ -42,8 +42,10 @@ export default function RecipePage() {
           />
         </div>
       )}
-      <IngredientCard ingredients={selectedRecipe.ingredients} />
-      <Methods methods={selectedRecipe.methods} />
+      <section className={styles.flexContainer}>
+        <IngredientCard ingredients={selectedRecipe.ingredients} />
+        <Methods methods={selectedRecipe.methods} />
+      </section>
     </main>
   );
 }

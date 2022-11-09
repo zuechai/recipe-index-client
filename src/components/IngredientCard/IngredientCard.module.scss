@@ -1,0 +1,82 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.section {
+  @include component-margin;
+  padding-left: 1.6rem;
+}
+
+.card {
+  @include ingredient-card;
+  padding: 0.8rem;
+  background-color: $accent-light;
+  border: solid 0.2rem $accent-bright;
+  @include border-radius;
+  @include box-shadow;
+
+  @include tablet-media-break {
+    margin: 0;
+  }
+
+  &__header {
+  }
+
+  &__headerText {
+    @include subheader;
+    @include subheading-bottom;
+  }
+}
+
+.ingredientList {
+  //   display: flex;
+  //   gap: 0.8rem;
+  //   flex-direction: column;
+  //   @include ingredients;
+
+  //   &__item {
+  //     // display: grid;
+  //     // grid-template-columns: repeat(3, auto);
+  //     // grid-template-rows: auto;
+  //     // // justify-items: start;
+  //     // justify-content: start;
+  //     // align-content: center;
+  //     // gap: 0.8rem;
+  //     padding-left: 1.6rem;
+  //     width: 100%;
+
+  //     @include tablet-media-break {
+  //       width: 25rem;
+  //     }
+
+  //     // @include five-media-break {
+  //     //   grid-template-columns: 20vw 1fr;
+  //     // }
+  //   }
+
+  &__quantity {
+    font: inherit;
+    text-align: right;
+  }
+
+  &__unit {
+    text-align: left;
+  }
+
+  &__ingredient {
+    text-align: left;
+  }
+}
+
+table {
+  @include ingredients;
+  border-spacing: 0;
+}
+
+tr {
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.4rem 0.8rem;
+}

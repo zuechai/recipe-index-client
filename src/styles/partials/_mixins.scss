@@ -3,6 +3,12 @@
 //*** MEDIA QUERIES
 
 // TABLET BREAKPOINT
+@mixin five-media-break {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
 @mixin tablet-media-break {
   @media screen and (min-width: $brkpt-tablet) {
     @content;

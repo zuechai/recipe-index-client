@@ -14,3 +14,10 @@
     @include box-shadow;
   }
 }
+
+.flexContainer {
+  @include tablet-media-break {
+    @include pad-sides;
+    display: flex;
+  }
+}

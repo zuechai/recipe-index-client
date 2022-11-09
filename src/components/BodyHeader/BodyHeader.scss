@@ -3,8 +3,6 @@
 
 .bh {
   &-header {
-    display: flex;
-    flex-direction: column-reverse;
     @include pad-sides;
 
     // &__title {
@@ -12,27 +10,6 @@
 
     &__name {
       @include page-header;
-    }
-  }
-
-  &-crumb {
-    &__wrapper {
-      margin-top: 1.2rem;
-    }
-
-    &__list {
-      display: flex;
-      gap: 0.8rem;
-      justify-content: flex-end;
-      color: $grey;
-      @include breadcrumbs;
-    }
-
-    // &__item {
-    // }
-
-    &__link {
-      color: inherit;
     }
   }
 }
