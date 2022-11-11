@@ -43,7 +43,9 @@ export default function RecipePage() {
         </div>
       )}
       <section className={styles.flexContainer}>
-        <IngredientCard ingredients={selectedRecipe.ingredients} />
+        <div className={styles.sticky}>
+          <IngredientCard ingredients={selectedRecipe.ingredients} />
+        </div>
         <Methods methods={selectedRecipe.methods} />
       </section>
     </main>

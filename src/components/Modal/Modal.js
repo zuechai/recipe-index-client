@@ -8,15 +8,23 @@ export default function Modal({ open, setOpen }) {
   const [findInput, setFindInput] = useState("");
   const [foundUsers, setFoundUsers] = useState();
 
+  const findUserHandler = (input) => {
+    setFindInput(input);
+  };
+
   useEffect(() => {
     const findUsers = async (query) => {
-      const results = await axios.get(
-        `http://localhost:5050/users/search${query}`
-      );
+      try {
+        const results = await axios.get(
+          `http://localhost:5050/users/search${query}`
+        );
 
-      console.log(results.data);
-      setFoundUsers(results.data);
-      setFindInput("");
+        console.log(results.data);
+        setFoundUsers(results.data);
+        setFindInput("");
+      } catch (e) {
+        console.log(e);
+      }
     };
 
     if (findInput === "") {
@@ -57,8 +65,8 @@ export default function Modal({ open, setOpen }) {
                 placeholder="Enter a username or email:"
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
-                    e.preventDefault();
-                    setFindInput(e.target.value);
+                    // e.preventDefault();
+                    findUserHandler(e.target.value);
                   }
                 }}
               />
@@ -68,7 +76,7 @@ export default function Modal({ open, setOpen }) {
                 className={styles.modal__button}
                 onClick={(e) => {
                   e.preventDefault();
-                  setFindInput(userRef.current.value);
+                  findUserHandler(userRef.current.value);
                 }}
               >
                 Find User

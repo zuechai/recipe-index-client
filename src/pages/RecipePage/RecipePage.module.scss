@@ -27,5 +27,14 @@
     @include pad-sides;
     flex-direction: row;
     align-items: flex-start;
+    margin-left: 30rem;
+  }
+}
+
+.sticky {
+  @include tablet-media-break {
+    width: 30rem;
+    position: fixed;
+    left: 1.6rem;
   }
 }

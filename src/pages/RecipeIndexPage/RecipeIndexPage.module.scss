@@ -14,5 +14,9 @@
     grid-template-columns: repeat(2, calc(50% - 0.8rem));
     gap: 1.6rem;
     width: 100%;
+
+    @include tablet-media-break {
+      grid-template-columns: repeat(3, calc(33% - 0.8rem));
+    }
   }
 }
