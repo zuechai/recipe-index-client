@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom";
 
-import "./NavBar.scss";
+import styles from "./NavBar.module.scss";
 
 export default function NavBar() {
   return (
-    <header className="nb-header">
-      <div className="nb-logo__wrapper">
-        <h1 className="nb-logo__text">Rcp Indx</h1>
+    <header className={styles.header}>
+      <div className={styles.logo__wrapper}>
+        <h1 className={styles.logo__text}>Rcp Indx</h1>
       </div>
-      <div className="nb-searchbar">{/* Hidden Search Bar */}</div>
-      <ul className="nb-nav">
-        <li className="nb-nav__item">
-          <Link to="/" className="nb-nav__link">
+      <div className={styles.searchbar}>{/* Hidden Search Bar */}</div>
+      <ul className={styles.nav}>
+        <li className={styles.nav__item}>
+          <Link to="/" className={styles.nav__link}>
             Index
           </Link>
         </li>
-        <li className="nb-nav__item">
-          <Link to="/" className="nb-nav__link">
+        <li className={styles.nav__item}>
+          <Link to="/" className={styles.nav__link}>
             Account
           </Link>
         </li>
