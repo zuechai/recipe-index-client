@@ -1,7 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.m-section {
+.section {
   @include pad-sides;
   @include component-margin;
 
@@ -11,22 +11,22 @@
     gap: 0.8rem;
     @include subheader;
 
-    &-text {
+    &Text {
       font-size: inherit;
     }
 
-    &-divider {
+    &Divider {
       @include divider;
     }
   }
 }
 
-.m-list {
+.list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 
-  &-item {
+  &Item {
     display: flex;
     gap: 0.8rem;
 

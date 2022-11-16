@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RecipeIndexPage from "./pages/RecipeIndexPage/RecipeIndexPage";
 import RecipePage from "./pages/RecipePage/RecipePage";
 
-import "./App.css";
+import "./App.module.scss";
 import HomePage from "./pages/HomePage/HomePage";
 
 function App() {

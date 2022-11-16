@@ -1,22 +1,22 @@
-import "./Methods.scss";
+import styles from "./Methods.module.scss";
 
 export default function Methods({ methods }) {
   console.log(methods);
   return (
-    <section className="m-section">
-      <header className="m-section__header">
-        <h3 className="m-section__header-text">Method</h3>
-        <div className="m-section__header-divider" />
+    <section className={styles.section}>
+      <header className={styles.section__header}>
+        <h3 className={styles.section__headerText}>Method</h3>
+        <div className={styles.section__headerDivider} />
       </header>
-      <ul className="m-list">
+      <ul className={styles.list}>
         {methods.length > 0 &&
           methods.map(({ id, stepNum, method }) => {
             return (
-              <li key={id} className="m-list-item">
-                <div className="m-list-item__step">
+              <li key={id} className={styles.listItem}>
+                <div className={styles.listItem__step}>
                   {stepNum < 10 ? `0${stepNum}` : stepNum}
                 </div>
-                <div className="m-list-item__method">{method}</div>
+                <div className={styles.listItem__method}>{method}</div>
               </li>
             );
           })}
