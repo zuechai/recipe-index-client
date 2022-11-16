@@ -2,14 +2,18 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  @include nav-pad;
   background-color: $primary-dark;
   color: $primary-light;
   @include nav-borders;
   @include box-shadow;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @include nav-pad;
   @include page-max-width;
 }
 

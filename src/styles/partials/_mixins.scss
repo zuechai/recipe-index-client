@@ -29,6 +29,7 @@
 @mixin page-max-width {
   @include tablet-media-break {
     padding: 0 auto;
+    max-width: 102.4rem;
   }
 }
 
