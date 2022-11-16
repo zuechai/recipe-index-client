@@ -18,6 +18,7 @@
 }
 
 .flexContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,14 +28,15 @@
     @include pad-sides;
     flex-direction: row;
     align-items: flex-start;
-    margin-left: 30rem;
+    // margin-left: 30rem;
   }
 }
 
 .sticky {
   @include tablet-media-break {
-    width: 30rem;
-    position: fixed;
+    position: sticky;
+    display: inline-block;
+    top: 3.2rem;
     left: 1.6rem;
   }
 }
