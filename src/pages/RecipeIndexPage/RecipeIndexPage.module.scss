@@ -2,9 +2,9 @@
 @use "../../styles/partials/mixins" as *;
 
 .index {
-  @include page-min-height;
-
   &__body {
+    margin: 0 auto;
+    @include page-max-width;
     @include pad-sides;
     @include component-margin;
   }

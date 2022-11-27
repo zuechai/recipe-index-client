@@ -31,14 +31,16 @@ export default function RecipePage() {
   }
 
   return (
-    <main className={styles.rpMain}>
-      <BodyHeader header={selectedRecipe.title} />
+    <main className={styles.main}>
+      <div className={styles.container}>
+        <BodyHeader header={selectedRecipe.title} />
+      </div>
       {selectedRecipe.image !== null && (
-        <div className={styles.rpMain__imgContainer}>
+        <div className={styles.main__imgContainer}>
           <img
             src={selectedRecipe.image}
             alt={"No alternative text provided by user"}
-            className={styles.rpMain__imgImg}
+            className={styles.main__imgImg}
           />
         </div>
       )}
