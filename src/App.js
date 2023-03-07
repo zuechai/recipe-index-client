@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
+import AccountPage from "./pages/AccountPage/AccountPage";
 import RecipeIndexPage from "./pages/RecipeIndexPage/RecipeIndexPage";
 import RecipePage from "./pages/RecipePage/RecipePage";
 
@@ -13,6 +13,10 @@ function App() {
       children: [
         {
           path: "/",
+          element: <AccountPage />,
+        },
+        {
+          path: "/recipes",
           element: <RecipeIndexPage />,
         },
         {

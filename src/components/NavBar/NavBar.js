@@ -11,7 +11,7 @@ export default function NavBar() {
       <div className="nb-searchbar">{/* Hidden Search Bar */}</div>
       <ul className="nb-nav">
         <li className="nb-nav__item">
-          <Link to="/" className="nb-nav__link">
+          <Link to="/recipes" className="nb-nav__link">
             Index
           </Link>
         </li>
