@@ -12,8 +12,12 @@ function App() {
       element: <HomePage />,
       children: [
         {
-          path: "/",
+          path: "/account",
           element: <AccountPage />,
+        },
+        {
+          path: "/",
+          element: <RecipeIndexPage />,
         },
         {
           path: "/recipes",

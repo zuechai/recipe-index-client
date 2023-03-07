@@ -16,7 +16,7 @@ export default function NavBar() {
           </Link>
         </li>
         <li className="nb-nav__item">
-          <Link to="/" className="nb-nav__link">
+          <Link to="/account" className="nb-nav__link">
             Account
           </Link>
         </li>
