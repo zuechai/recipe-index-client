@@ -1,7 +1,11 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.rpMain {
+.container {
+  @include pad-sides;
+}
+
+.main {
   min-height: calc(100vh - (9rem + 6.3rem));
 
   &__imgContainer {

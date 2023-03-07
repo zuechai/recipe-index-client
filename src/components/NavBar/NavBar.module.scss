@@ -1,0 +1,39 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+  background-color: $primary-dark;
+  color: $primary-light;
+  @include nav-borders;
+  @include box-shadow;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @include nav-pad;
+  @include page-max-width;
+}
+
+.logo {
+  &__wrapper {
+  }
+  &__text {
+    font-size: 2.4rem;
+  }
+}
+
+// &-searchbar {
+// }
+
+.nav {
+  display: flex;
+  gap: 1.8rem;
+
+  &__item {
+  }
+  &__link {
+  }
+}
