@@ -2,21 +2,22 @@
 @use "../../styles/partials/mixins" as *;
 
 .index {
-  @include page-min-height;
-
   &__body {
+    margin: 0 auto;
+    @include page-max-width;
     @include pad-sides;
     @include component-margin;
   }
 
   &__cardList {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, calc(50% - 0.8rem));
     gap: 1.6rem;
-    width: 100%;
 
     @include tablet-media-break {
-      grid-template-columns: repeat(3, calc(33% - 0.8rem));
+      grid-template-columns: repeat(3, calc(33% - 1.4rem));
+      gap: 2.4rem;
     }
   }
 }

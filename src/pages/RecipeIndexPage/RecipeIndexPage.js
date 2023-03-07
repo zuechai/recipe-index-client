@@ -40,21 +40,22 @@ export default function RecipeIndexPage() {
 
   return (
     <main className={styles.index}>
-      <BodyHeader header="Index" />
-      <div className={styles.index__body}>
-        <SearchBar setInputState={setInputState} />
-
-        <ul className={styles.index__cardList}>
-          {recipes.map(({ recipeId, title, image }) => {
-            return (
-              <li key={recipeId} className="index__card-items">
-                <Link to={`/recipes/${recipeId}`}>
-                  <RecipeCard id={recipeId} title={title} image={image} />
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      <div className={styles.index__container}>
+        <div className={styles.index__body}>
+          <BodyHeader header="Index" />
+          <SearchBar setInputState={setInputState} />
+          <ul className={styles.index__cardList}>
+            {recipes.map(({ recipeId, title, image }) => {
+              return (
+                <li key={recipeId} className="index__card-items">
+                  <Link to={`/recipes/${recipeId}`}>
+                    <RecipeCard id={recipeId} title={title} image={image} />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </main>
   );

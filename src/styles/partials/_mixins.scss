@@ -26,6 +26,12 @@
   min-height: calc(100vh - (9rem + 6.3rem));
 }
 
+@mixin page-max-width {
+  @include tablet-media-break {
+    max-width: 102.4rem;
+  }
+}
+
 //*** TYPOGRAPHY
 
 @mixin page-header {
@@ -98,13 +104,8 @@
   padding: 1.8rem 1.6rem 1.4rem;
 }
 
-@mixin subheading-bottom {
-  // margin-bottom: 0.6rem;
-}
-
 @mixin subheader-margin {
   padding-top: $pad-3;
-  // padding-bottom: 1.2rem;
 }
 
 @mixin component-margin {
@@ -118,6 +119,10 @@
 @mixin pad-sides {
   padding-right: 1.6rem;
   padding-left: 1.6rem;
+  @include tablet-media-break {
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+  }
 }
 
 // dimensions

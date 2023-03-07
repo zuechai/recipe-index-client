@@ -7,6 +7,8 @@
 
   &__form {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   &__label {
@@ -26,6 +28,10 @@
     padding: 0.4rem;
     color: $primary-dark;
     @include box-shadow;
+
+    @include tablet-media-break {
+      max-width: 40rem;
+    }
 
     &:placeholder {
       color: $grey;
