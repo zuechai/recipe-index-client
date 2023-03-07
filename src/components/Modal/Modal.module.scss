@@ -17,6 +17,7 @@
     @include pad-sides;
     @include border-radius;
     width: 90%;
+    max-width: 50rem;
     background-color: $primary-light;
   }
 

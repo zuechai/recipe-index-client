@@ -2,26 +2,25 @@
 @use "../../styles/partials/mixins" as *;
 
 .footer {
+  @include nav-pad;
+  background-color: $primary-dark;
+  color: $primary-light;
+  @include nav-borders;
+}
+
+.container {
+  margin: 0 auto;
+  @include page-max-width;
   display: flex;
   justify-content: space-between;
   background-color: $primary-dark;
   color: $primary-light;
-  @include nav-pad;
-  @include nav-borders;
 }
 
 .column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.logo {
-  &__wrapper {
-  }
-
-  &__text {
-  }
 }
 
 .copyright {
